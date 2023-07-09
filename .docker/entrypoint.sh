@@ -3,6 +3,7 @@ set -e
 
 # Change ownership of directories
 chown -R www-data:www-data /var/www/html/
+chown -R mysql:mysql /var/lib/mysql
 
 # Specify the path to the Apache configuration file
 APACHE_CONF="/etc/apache2/sites-available/000-default.conf"
