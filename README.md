@@ -14,3 +14,4 @@ git checkout dev
 git pull
 ```
 - Create and start the image `docker-compose up -d`
+- Although your app container may be running, it will take 5 to 10 minutes until the webserver is functional.  

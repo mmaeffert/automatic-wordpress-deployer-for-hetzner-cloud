@@ -21,7 +21,7 @@ chown -R www-data:www-data /var/www/html/
 APACHE_CONF="/etc/apache2/sites-available/000-default.conf"
 
 # Specify the desired document root directory
-DOCUMENT_ROOT="/var/www/html/public"
+DOCUMENT_ROOT="/var/www/html/"
 
 # Update the Apache configuration with the new document root
 sed -i "s|DocumentRoot /var/www/html|DocumentRoot ${DOCUMENT_ROOT}|" ${APACHE_CONF}
