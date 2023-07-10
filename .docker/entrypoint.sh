@@ -10,7 +10,7 @@ apt-get update && apt-get install -y \
     && docker-php-ext-install pdo_mysql mbstring zip
 
 # Install dependencies using Composer
-RUN composer install --optimize-autoloader
+composer install --optimize-autoloader
 
 # Set up Apache configuration
 a2enmod rewrite
