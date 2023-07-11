@@ -10,10 +10,6 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 # Copy application files
 COPY . .
 
-# Copy the .env file specificially
-COPY .env /var/www/html/.env
-
-
 # Copy entrypoint script
 COPY .docker/entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
