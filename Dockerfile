@@ -7,9 +7,6 @@ WORKDIR /var/www/html
 # Install Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
-# Copy application files
-COPY . .
-
 # Copy entrypoint script
 COPY .docker/entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh

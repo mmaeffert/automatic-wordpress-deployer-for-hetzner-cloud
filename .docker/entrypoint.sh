@@ -25,15 +25,5 @@ sed -i "s|DocumentRoot /var/www/html|DocumentRoot ${DOCUMENT_ROOT}|" ${APACHE_CO
 # Enable the Apache rewrite module
 a2enmod rewrite
 
-# # Generate the Application Key
-# php artisan key:generate --force
-
-# # Set the Application Key in the .env file
-# NEW_APP_KEY=$(php artisan key:generate --show)
-# sed -i "s/^\(APP_KEY\s*=\s*\).*\$/\1${NEW_APP_KEY}/" .env
-
-# # Clear the Application Cache
-# php artisan cache:clear
-
 # Start Apache in the foreground
 exec apache2-foreground
