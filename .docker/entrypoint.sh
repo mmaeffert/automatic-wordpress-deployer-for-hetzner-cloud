@@ -6,9 +6,7 @@ apt-get update && apt-get install -y \
     libonig-dev \
     libzip-dev \
     unzip \
-
-# Install dependencies using Composer
-composer install --optimize-autoloader
+    npm
 
 # Change ownership of directories
 chown -R www-data:www-data /var/www/html/
@@ -25,5 +23,12 @@ sed -i "s|DocumentRoot /var/www/html|DocumentRoot ${DOCUMENT_ROOT}|" ${APACHE_CO
 # Enable the Apache rewrite module
 a2enmod rewrite
 
+# Install node packages
+npm install
+
+# compile
+npm run dev
+
 # Start Apache in the foreground
 exec apache2-foreground
+
