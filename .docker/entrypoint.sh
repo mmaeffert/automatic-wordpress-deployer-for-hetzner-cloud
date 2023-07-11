@@ -6,7 +6,6 @@ apt-get update && apt-get install -y \
     libonig-dev \
     libzip-dev \
     unzip \
-    && docker-php-ext-install pdo_mysql mbstring zip
 
 # Install dependencies using Composer
 composer install --optimize-autoloader
@@ -21,7 +20,7 @@ chown -R www-data:www-data /var/www/html/
 APACHE_CONF="/etc/apache2/sites-available/000-default.conf"
 
 # Specify the desired document root directory
-DOCUMENT_ROOT="/var/www/html/"
+DOCUMENT_ROOT="/var/www/html/public/"
 
 # Update the Apache configuration with the new document root
 sed -i "s|DocumentRoot /var/www/html|DocumentRoot ${DOCUMENT_ROOT}|" ${APACHE_CONF}

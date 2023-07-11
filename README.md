@@ -15,3 +15,6 @@ git pull
 ```
 - Create and start the image `docker-compose up -d`
 - Although your app container may be running, it will take 5 to 10 minutes until the webserver is functional.  
+#### For developing on Windows:
+- When developing on windows, you can increase your apps performance if you do the following setting in your docker hub Settings->General Settings -> unclick "Use the WSL 2 based engine" -> restart
+- Check 
