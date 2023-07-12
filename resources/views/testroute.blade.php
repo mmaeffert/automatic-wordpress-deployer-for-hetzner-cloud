@@ -1,5 +1,16 @@
 @extends('layouts.app')
 
 @section('content')
-<h1>welcome to your test route</h1>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">{{ __('Dashboard') }}</div>
+                <div class="card-body">
+                    <h2>Hello</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 @endsection

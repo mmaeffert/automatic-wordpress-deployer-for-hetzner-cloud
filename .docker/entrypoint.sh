@@ -18,7 +18,7 @@ APACHE_CONF="/etc/apache2/sites-available/000-default.conf"
 DOCUMENT_ROOT="/var/www/html/public/"
 
 # Update the Apache configuration with the new document root
-sed -i "s|DocumentRoot /var/www/html|DocumentRoot ${DOCUMENT_ROOT}|" ${APACHE_CONF}
+# sed -i "s|DocumentRoot /var/www/html|DocumentRoot ${DOCUMENT_ROOT}|" ${APACHE_CONF}
 
 # Enable the Apache rewrite module
 a2enmod rewrite
@@ -27,7 +27,7 @@ a2enmod rewrite
 npm install
 
 # compile
-npm run dev
+# npm run dev
 
 # Start Apache in the foreground
 exec apache2-foreground
